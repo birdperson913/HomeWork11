@@ -22,7 +22,14 @@
             <version>5.7.0</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.1.0</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
+
 
     <build>
         <plugins>
@@ -33,10 +40,8 @@
                 <configuration>
                     <failIfNoTests>true</failIfNoTests>
                 </configuration>
-
             </plugin>
 
-            <plugin>
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
@@ -80,3 +85,4 @@
     </build>
 
 </project>
+
