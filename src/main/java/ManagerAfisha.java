@@ -1,8 +1,8 @@
 import java.util.Arrays;
 
 public class ManagerAfisha {
-    private String afisha[];// массив с фильмами
-    private int output;//кол-во выводимых фильов
+    private String afisha[];
+    private  int output;
 
     public void setAfisha( String [] afisha) {
         this.afisha = Arrays.copyOf(afisha, afisha.length);}
@@ -36,16 +36,20 @@ public class ManagerAfisha {
         return afisha = tmp;
     }
 
-    public void findAll() {
-        for (int i = 0; i < afisha.length; i++) {
-            System.out.println(afisha[i]);
-        }
-    }
+    public String [] findAll() {
 
-    public void findLast() {
-        for (int i = afisha.length - output; i < afisha.length; i++) {
-            System.out.println(afisha[i]);
+        return getAfisha();
         }
+
+
+    public String [] findLast() {
+        String [] tmp= new String[output];
+        int b = 0;
+        for ( int i = afisha.length - output; i < afisha.length; i++) {
+            tmp[b] = afisha[i];
+            b++;
+        }
+        return afisha=tmp;
     }
 
 
