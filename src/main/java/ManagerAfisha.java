@@ -2,12 +2,11 @@ import java.util.Arrays;
 
 public class ManagerAfisha {
     private String afisha[];
-    private  int output;
+    private int output;
 
-    public void setAfisha( String [] afisha) {
-        this.afisha = Arrays.copyOf(afisha, afisha.length);}
-
-
+    public void setAfisha(String[] afisha) {
+        this.afisha = Arrays.copyOf(afisha, afisha.length);
+    }
 
 
     public String[] getAfisha() {
@@ -25,8 +24,7 @@ public class ManagerAfisha {
     }
 
 
-
-    public String  [] addFilm(String newFilm) {
+    public String[] addFilm(String newFilm) {
         String tmp[] = new String[afisha.length + 1];
         for (int i = 0; i < afisha.length; i++) {
             tmp[i] = afisha[i];
@@ -36,20 +34,20 @@ public class ManagerAfisha {
         return afisha = tmp;
     }
 
-    public String [] findAll() {
+    public String[] findAll() {
 
         return getAfisha();
-        }
+    }
 
 
-    public String [] findLast() {
-        String [] tmp= new String[output];
+    public String[] findLast() {
+        String[] tmp = new String[output];
         int b = 0;
-        for ( int i = afisha.length - output; i < afisha.length; i++) {
+        for (int i = afisha.length - output; i < afisha.length; i++) {
             tmp[b] = afisha[i];
             b++;
         }
-        return afisha=tmp;
+        return afisha = tmp;
     }
 
 
