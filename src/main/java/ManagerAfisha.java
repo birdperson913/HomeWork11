@@ -4,10 +4,6 @@ public class ManagerAfisha {
     private String afisha[];
     private int output;
 
-    public void setAfisha(String[] afisha) {
-        this.afisha = Arrays.copyOf(afisha, afisha.length);
-    }
-
 
     public String[] getAfisha() {
         return afisha;
@@ -41,15 +37,19 @@ public class ManagerAfisha {
 
 
     public String[] findLast() {
-        String[] tmp = new String[output];
+        int lengthTmp;
+        if (afisha.length <= output) {
+            lengthTmp = afisha.length;
+        } else {
+            lengthTmp = output;
+        }
+        String[] tmp = new String[lengthTmp];
         int copyToIndex = 0;
-        for (int i = afisha.length - output; i < afisha.length; i++) {
+        for (int i = afisha.length - lengthTmp; i < afisha.length; i++) {
             tmp[copyToIndex] = afisha[i];
             copyToIndex++;
         }
         return afisha = tmp;
     }
-
-
 }
 
