@@ -42,10 +42,10 @@ public class ManagerAfisha {
 
     public String[] findLast() {
         String[] tmp = new String[output];
-        int b = 0;
+        int copyToIndex = 0;
         for (int i = afisha.length - output; i < afisha.length; i++) {
-            tmp[b] = afisha[i];
-            b++;
+            tmp[copyToIndex] = afisha[i];
+            copyToIndex++;
         }
         return afisha = tmp;
     }
