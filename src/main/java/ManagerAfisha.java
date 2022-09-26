@@ -4,10 +4,6 @@ public class ManagerAfisha {
     private String afisha[];
     private int output;
 
-    public void setAfisha(String[] afisha) {
-        this.afisha = Arrays.copyOf(afisha, afisha.length);
-    }
-
 
     public String[] getAfisha() {
         return afisha;
@@ -55,4 +51,3 @@ public class ManagerAfisha {
 
 
 }
-
