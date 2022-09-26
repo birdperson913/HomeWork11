@@ -4,10 +4,6 @@ public class ManagerAfisha {
     private String afisha[];
     private int output;
 
-    public void setAfisha(String[] afisha) {
-        this.afisha = Arrays.copyOf(afisha, afisha.length);
-    }
-
 
     public String[] getAfisha() {
         return afisha;
@@ -41,18 +37,37 @@ public class ManagerAfisha {
 
 
     public String[] findLast() {
-        if(output>afisha.length){
-            output=afisha.length;
+        int lengthTmp;
+<<<<<<<<< Temporary merge branch 1
+        if (afisha.length<=output) {
+            lengthTmp = afisha.length;
         }
-        String[] tmp = new String[output];
+        else {
+            lengthTmp =output;
+        }
+        String[] tmp = new String[lengthTmp];
         int copyToIndex = 0;
-        for (int i = afisha.length - output; i < afisha.length; i++) {
+                for (int i = afisha.length - lengthTmp; i < afisha.length; i++) {
+                    tmp[copyToIndex] = afisha[i];
+                    copyToIndex++;
+                }
+            return afisha = tmp;
+=========
+        if (afisha.length <= output) {
+            lengthTmp = afisha.length;
+        } else {
+            lengthTmp = output;
+        }
+        String[] tmp = new String[lengthTmp];
+        int copyToIndex = 0;
+        for (int i = afisha.length - lengthTmp; i < afisha.length; i++) {
             tmp[copyToIndex] = afisha[i];
             copyToIndex++;
+>>>>>>>>> Temporary merge branch 2
         }
-        return afisha = tmp;
     }
-
-
+<<<<<<<<< Temporary merge branch 1
+=========
 }
+>>>>>>>>> Temporary merge branch 2
 
